@@ -373,10 +373,6 @@ public class MediaControlPanel {
             }
         }
 
-        // Song name
-        TextView titleText = mPlayerViewHolder.getTitleText();
-        titleText.setText(data.getSong());
-
         // Artist name
         TextView artistText = mPlayerViewHolder.getArtistText();
         artistText.setText(data.getArtist());
