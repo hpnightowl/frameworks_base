@@ -60,4 +60,9 @@
     <!-- Bolt Battery Icon -->
     <dimen name="status_bar_battery_bolt_icon_height">13.5dp</dimen>
     <dimen name="status_bar_battery_bolt_icon_width">9.7dp</dimen>
+
+    <!-- QS Player -->
+    <dimen name="quick_settings_top_margin_media">4dp</dimen>
+    <dimen name="quick_settings_top_margin_media_extra">10dp</dimen>
+    <dimen name="qs_media_action_button_size">48dp</dimen>
 </resources>
