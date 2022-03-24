@@ -1038,7 +1038,7 @@ public class VolumeDialogImpl implements VolumeDialog,
     }
 
     public void initSettingsH() {
-        if (mDefaultRow == null) {
+        if (mDefaultRow == null || mDefaultRow != getActiveRow()) {
             mDefaultRow = getActiveRow();
             // Update the rows to ensure the expandable rows are configured correctly
             updateRowsH(mDefaultRow);
@@ -1631,8 +1631,8 @@ public class VolumeDialogImpl implements VolumeDialog,
         if (mActiveStream != state.activeStream) {
             mPrevActiveStream = mActiveStream;
             mActiveStream = state.activeStream;
-            VolumeRow activeRow = getActiveRow();
-            updateRowsH(activeRow);
+            mDefaultRow = getActiveRow();
+            updateRowsH(mDefaultRow);
             if (mShowing) rescheduleTimeoutH();
         }
         for (VolumeRow row : mRows) {
