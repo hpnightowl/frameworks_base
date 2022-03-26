@@ -336,12 +336,9 @@ public class MediaControlPanel {
                         R.string.controls_media_playing_item_description,
                         data.getSong(), data.getArtist(), data.getApp()));
 
-        ImageView albumView = mPlayerViewHolder.getAlbumView();
         boolean hasArtwork = data.getArtwork() != null;
         if (hasArtwork) {
             Drawable artwork = scaleDrawable(data.getArtwork());
-            albumView.setPadding(0, 0, 0, 0);
-            albumView.setImageDrawable(artwork);
         } else {
             Drawable deviceIcon;
             if (data.getDevice() != null && data.getDevice().getIcon() != null) {
@@ -350,8 +347,6 @@ public class MediaControlPanel {
                 deviceIcon = getContext().getDrawable(R.drawable.ic_headphone);
             }
             deviceIcon.setTintList(ColorStateList.valueOf(mBackgroundColor));
-            albumView.setPadding(mDevicePadding, mDevicePadding, mDevicePadding, mDevicePadding);
-            albumView.setImageDrawable(deviceIcon);
         }
 
         // App icon
